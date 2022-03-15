@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block options %}
+{% endblock %}
+
+{% block content %}
+<body>
+	<div class='container' style='width:550px'>
+		<form method="POST" class="form-register">
+			<br>
+			<h1 class='h3'> Fill the form and discover if your loan request will be accepted or not</h1>
+			{{ form_single.hidden_tag() }}
+
+                        <br>
+                        {{ form_single.age.label() }}
+                        {{ form_single.age(class="form-control", style = "width:500px", placeholder = "Ex: 28")}}
+
+                        <br>
+                        {{ form_single.income.label() }}
+                        {{ form_single.income(class="form-control", style = "width:500px", placeholder = "Ex: 18000")}}
+
+                        <br>
+                        {{ form_single.loan_amnt.label() }}
+                        {{ form_single.loan_amnt(class="form-control", style= "width:500px", placeholder = "Ex: 1400")}}
+			
+			<br>
+                        {{ form_single.person_home_ownership.label() }}
+                        {{ form_single.person_home_ownership(class="form-control", style= "width:500px")}}
+
+			<br>
+                        {{ form_single.person_emp_length.label() }}
+                        {{ form_single.person_emp_length(class="form-control", style = "width:500px", placeholder = "Ex: 8")}}
+
+                        <br>
+                        {{ form_single.int_rate.label() }}
+                        {{ form_single.int_rate(class="form-control", style= "width:500px", placeholder = "Ex: 2.5 (if the interest rate is 2.5%)")}}
+
+			<br>
+                        {{ form_single.loan_intent.label() }}
+                        {{ form_single.loan_intent(class="form-control", style= "width:500px")}}
+			
+			<br>
+                        {{ form_single.loan_grade.label() }}
+                        {{ form_single.loan_grade(class="form-control", style= "width:500px")}}
+
+                        <br>
+                        {{ form_single.past_default.label() }}
+                        {{ form_single.past_default(class="form-control", style= "width:500px")}}
+
+			 <br>
+                        {{ form_single.credit_hist_length.label() }}
+                        {{ form_single.credit_hist_length(class="form-control", style= "width:500px", placeholder= "Ex: 6")}}
+
+			<br>
+			{{ form_single.submit(class="btn btn-lg btn-block btn-primary", style="width:500px")}}
+		</form>
+	</div>
+
+</body>
+{% endblock %}

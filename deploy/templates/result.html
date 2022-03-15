@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+Result
+{% endblock %}
+
+{% block options %}
+{% endblock %}
+
+{% block content %}
+<body>
+<div class='row'>
+	<div class='column' style='padding-left:300px; width:500px'>
+		<br>
+		<h1 class='h3'> Summary </h1>
+		<h1 class='h6'> Age: {{age}}</h1>
+		<h1 class='h6'> Annual income: <span>&#36;</span> {{income}}</h1>
+		<h1 class='h6'> Loan amount: <span>&#36;</span> {{amnt}} </h1>
+		<h1 class='h6'> Interest rate: {{int_rate}} <span>&#37;</span> </h1>
+		<h1 class='h6'> Home ownership: {{home_own}} </h1>
+		<h1 class='h6'> Years of employment: {{emp_len}} </h1>
+		<h1 class='h6'> Loan intention: {{intent}} </h1>
+		<h1 class='h6'> Loan grade: {{grade}} </h1>
+		<h1 class='h6'> Defaulted in the past: {{past_defa}} </h1>
+		<h1 class='h6'> Length of credit history: {{cred_len}} </h1>
+	</div>
+	
+	<div class='column' style='padding-left:300px; width:500px'>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		{% if status=='ACCEPTED'%}
+		<h1 class='h1' style='color:green'> ACCEPTED </h1>
+		{% else %}
+		<h1 class='h1' style='color:red'> DENIED </h1>
+		{% endif%}
+</div>
+</body>
+{% endblock %}
