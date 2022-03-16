@@ -9,14 +9,14 @@ You can find the model implementation in the *Model.py* Jupyter notebook inside 
 - Two scores were used to select the best model: F2 and ROC AUC (in that order).
 - A first model discrimination was performed by estimating the scores of several models without any hyperparameter tuning. This was done for two cases: for data without a resampling technique and for the same data with an oversampling of the minority class. Additionaly, a performance estimation was done for the XGBoost classifier with different resampling techniques.
 <p align="center">
-  <img src="images/resampling_comp.png" width="80%">
+  <img src="images/resampling_comp.png" width="85%">
 </p>
 
 - Three models were selected for further exploration (XGBoostClassifier, GradientBoostingClassifier and RandomForestClassifier). We also selected the Random Undersampling technique as the best resampling technique. A hyperparameter tuning was performed for the three classifiers and the XGBoostClassifier with customized hyperparameters was chosen as the best one.
 - A threshold for this selected model was chosen to maximize the profit percentage.
 
 <p align="center">
-  <img src="images/pred_prob.png" width="50%">
+  <img src="images/pred_prob.png" width="60%">
 </p>
 
 - Finally, the selected model was evaluated with the test set and it was seen that its performace it is accordance with the performace estimation of the model. The true profit percentage obtained was very satisfying whe compared with the optimal profit percentage.
